@@ -1,0 +1,23 @@
+.layui_footer {
+    text-align: center;
+    font-size: 12px;
+}
+.iconfont {
+    padding-right: 8px;
+}
+.layui-icon {
+    padding-left: 30px;
+    padding-right: 8px;
+}
+.index_home {
+    width: 100%;
+    height: 100%;
+}
+.layui-body {
+    overflow: hidden;
+}
+.userinfo {
+    height: 60px;
+    line-height: 60px;
+    font-size: 12px;
+}
