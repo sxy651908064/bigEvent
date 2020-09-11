@@ -16,8 +16,32 @@
 .layui-body {
     overflow: hidden;
 }
+
+a {
+    transform: none !important;
+}
 .userinfo {
     height: 60px;
     line-height: 60px;
     font-size: 12px;
+    text-align: center;
+    user-select: none;
+}
+.userinfo img {
+    width: 40px;
+    height: 40px;
+}
+.layui-nav .userinfo {
+    border-bottom: 1px solid #282b33;
+}
+.head_img {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: aliceblue;
+    color: #000000;
+    text-align: 40px;
+    line-height: 40px;
+    margin-right: 8px;
 }
