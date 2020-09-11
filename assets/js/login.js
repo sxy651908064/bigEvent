@@ -30,7 +30,7 @@ $(function () {
 
 
     var layer = layui.layer
-    //给注册事件添加后台管理
+    //给注册事件提交后台数据
     $('#form_reg').on('submit',function(e) {
         
         //阻止默认行为
@@ -38,7 +38,7 @@ $(function () {
         
         //发去Ajax请求，提交后台数据
         $.ajax({
-            url:'http://ajax.frontend.itheima.net/api/reguser',
+            url:'/api/reguser',
             type:'post',
             data:{
                 username: $('#form_reg [name="username"]').val(),
@@ -58,7 +58,7 @@ $(function () {
     })
 
 
-    //登录主页面
+    //给登录页面提交后台数据
     $('#form_login').on('submit',function(e) {
 
         //组织表单默认事件
@@ -66,7 +66,7 @@ $(function () {
 
         //发起Ajax请求
         $.ajax({
-            url:'http://ajax.frontend.itheima.net/api/login',
+            url:'/api/login',
             type:'post',
             data:$(this).serialize(),
             success: function(res) {
@@ -75,8 +75,12 @@ $(function () {
                     layer.msg('登录失败！')
                 } else {
                     layer.msg('登录成功！')
+
+                    //把后台登录权限代码保存到本地缓存
                     localStorage.setItem('ID',res.token)
-                    location.href('/index.html')
+
+                    //执行跳转后台主页面
+                    location.href = '/index.html'
                 }
             }
         })
